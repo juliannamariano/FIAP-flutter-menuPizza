@@ -1,6 +1,7 @@
 //stl
 import 'package:flutter/material.dart';
 import 'package:pizza_menu/item.dart';
+import 'package:pizza_menu/pizza_data.dart';
 
 class Menu extends StatelessWidget {
   const Menu({super.key});
@@ -16,12 +17,12 @@ class Menu extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Item(),
-              Item(),
-              Item(),
-              Item(),
-              Item(),
-              Item(),
+              Item(pizza: pizzaData[0]),
+              Item(pizza: pizzaData[1]),
+              Item(pizza: pizzaData[2]),
+              Item(pizza: pizzaData[3]),
+              Item(pizza: pizzaData[4]),
+              Item(pizza: pizzaData[5]),
             ],
           ),
         ),

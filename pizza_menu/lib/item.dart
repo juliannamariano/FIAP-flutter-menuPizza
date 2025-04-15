@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_menu/pizza_data.dart';
 
 class Item extends StatelessWidget {
-  const Item({super.key});
+  final Pizza pizza;
+  const Item({super.key, required this.pizza});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class Item extends StatelessWidget {
                   ClipRRect(
                     borderRadius:BorderRadius.circular(8) ,
                     child: Image.asset(
-                      "images/focaccia.jpg",
+                      "images/${pizza.photoName}",
                       width: 100,
                       height: 100,
                     ),
@@ -27,7 +29,7 @@ class Item extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Text 1",
+                          pizza.name,
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold),
                         ),
@@ -35,7 +37,7 @@ class Item extends StatelessWidget {
                           height: 6,
                         ),
                         Text(
-                          "Text 2",
+                          pizza.ingredients,
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.black,
@@ -45,7 +47,7 @@ class Item extends StatelessWidget {
                           height: 6,
                         ),
                         Text(
-                          "Text 3",
+                          "\$${pizza.price}",
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.black,
