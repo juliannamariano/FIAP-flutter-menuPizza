@@ -22,7 +22,17 @@ class Menu extends StatelessWidget {
       ),
     );
   }
+  //Essa função vai retornar uma lista de widgets Item (cada Item representa uma pizza no cardápio).
   List<Item> buildPizzas() {
-  return pizzaData.map((pizza) => Item(pizza: pizza)).toList();
+  List<Item> lista = []; //lista vazia
+
+//Para cada var pizza dentro do pizzaDaata a lista add um Item do tipo pizza
+  for (var pizza in pizzaData) {
+    lista.add(Item(pizza: pizza));
+  }
+
+  return lista;
 }
 }
+
+
