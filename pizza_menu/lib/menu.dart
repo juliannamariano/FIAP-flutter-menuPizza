@@ -24,7 +24,15 @@ class Menu extends StatelessWidget {
               ),
             ),
           ),
-          ElevatedButton(onPressed: (){}, child: Text('Order now'))
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: SizedBox(
+              child: ElevatedButton(onPressed: (){}, child: Text('Order now', style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),),),
+              ),
+          )
         ],
       ),
     );
