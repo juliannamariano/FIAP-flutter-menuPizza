@@ -16,17 +16,13 @@ class Menu extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            children: [
-              Item(pizza: pizzaData[0]),
-              Item(pizza: pizzaData[1]),
-              Item(pizza: pizzaData[2]),
-              Item(pizza: pizzaData[3]),
-              Item(pizza: pizzaData[4]),
-              Item(pizza: pizzaData[5]),
-            ],
+           children: buildPizzas(),
           ),
         ),
       ),
     );
   }
+  List<Item> buildPizzas() {
+  return pizzaData.map((pizza) => Item(pizza: pizza)).toList();
+}
 }
